@@ -28,10 +28,10 @@ public class Post implements Serializable {
     @Column(name = "message")
     private String message;
 
-    @Column(name = "image_link", length = 2024)
+    @Column(name = "image_link", length = 512)
     private String imageLink;
 
-    @Column(name = "image_name", length = 2024)
+    @Column(name = "image_name")
     private String imageName;
 
     @Column(name = "created_at")

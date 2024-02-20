@@ -24,12 +24,12 @@ public class PostDto implements Serializable {
     @Length(max = 255, message = "Message length must be smaller than 255 symbols.")
     private String message;
 
-    @Length(max = 2024,
-            message = "ImageLink length must be smaller than 2024 symbols.")
+    @Length(max = 512,
+            message = "ImageLink length must be smaller than 512 symbols.")
     private String imageLink;
 
-    @Length(max = 2024,
-            message = "ImageName length must be smaller than 2024 symbols.")
+    @Length(max = 255,
+            message = "ImageName length must be smaller than 255 symbols.")
     private String imageName;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
