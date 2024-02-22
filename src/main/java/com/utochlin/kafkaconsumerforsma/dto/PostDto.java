@@ -1,6 +1,7 @@
 package com.utochlin.kafkaconsumerforsma.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +15,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostDto implements Serializable {
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private Long id;
 
     @NotNull(message = "Description must be not null.")
     @Length(max = 255,
@@ -34,5 +37,9 @@ public class PostDto implements Serializable {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime createdAt;
+
+    @Length(max = 255, message = "authorName length must be smaller than 255 symbols.")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private String authorName;
 
 }
