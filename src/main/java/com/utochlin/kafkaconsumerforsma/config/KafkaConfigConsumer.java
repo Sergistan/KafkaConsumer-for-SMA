@@ -19,7 +19,6 @@ import java.util.Map;
 @Configuration
 @RequiredArgsConstructor
 public class KafkaConfigConsumer {
-
     @Bean
     public ConsumerFactory<Long, PostDto> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
