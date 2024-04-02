@@ -1,10 +1,11 @@
-package com.utochlin.kafkaconsumerforsma.services.impl;
+package com.utochlin.kafkaconsumerforsma.services;
 
 import com.utochlin.kafkaconsumerforsma.dto.PostDto;
 import com.utochlin.kafkaconsumerforsma.models.Post;
 import com.utochlin.kafkaconsumerforsma.models.Role;
 import com.utochlin.kafkaconsumerforsma.models.User;
 import com.utochlin.kafkaconsumerforsma.repositories.UserRepository;
+import com.utochlin.kafkaconsumerforsma.services.impl.PostServiceImpl;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

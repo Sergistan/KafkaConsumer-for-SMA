@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:tc:postgresql:12.3:///adapter?TC_INITSCRIPT=initscript.sql
+  kafka:
+    consumer:
+      group-id: test-group
+      auto-offset-reset: earliest
+      security:
+        protocol: PLAINTEXT
+    producer:
+      security:
+        protocol: PLAINTEXT
